@@ -1,4 +1,7 @@
-def knuth_morris_pratt(haystack, needle):
+from typing import Generator
+
+
+def knuth_morris_pratt(haystack: str, needle: str) -> Generator[int, None, None]:
     needle = list(needle)
 
     shifts = [1] * (len(needle) + 1)
